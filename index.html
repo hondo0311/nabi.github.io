@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" ;="" charset="utf-8">
+    <title>Hotel Nabe</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.hotelnabe.com.tw/css/ed0c2537.vendor.css">
+	<link rel="stylesheet" href="https://www.hotelnabe.com.tw/css/6b9fc4d1.main.css">
+	<script src="https://www.hotelnabe.com.tw/js/25b0a9ff.vendor.js"></script>
+</head>
+<body>
+        <nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-list">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="/">
+                <div class="lt-logo" id="nabe-logo" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="回首頁"></div>
+                </a>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-list">
+				<ul class="nav navbar-nav">
+					                                        <li><a href="/order"><span class="glyphicon glyphicon-pencil"></span> 訂單管理</a></li>
+										<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-transfer"></span> 數量價格 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+														<li><a href="/roomqty"><span class="glyphicon glyphicon-share-alt"></span> 初次設定</a></li><!--快速放房-->
+																					<li><a href="/closeout"><span class="glyphicon glyphicon glyphicon-plus-sign"></span> 每日庫存</a></li><!--每日數量-->
+														<li><a href="/rateotadate"><span class="glyphicon glyphicon-list-alt"></span> 價格總表</a></li><!--庫存總表-->
+														<li><a href="/ratecopy"><span class="glyphicon glyphicon-chevron-right"></span> 複製價格</a></li>
+														<li><a href="/syncstatus"><span class="glyphicon glyphicon-random"></span> 同步狀態</a></li>
+						</ul>
+					</li>
+										<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> 基本設定 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/roomtype"><span class="glyphicon glyphicon-tags"></span> 價格方案</a></li>
+							<li><a href="/mapping"><span class="glyphicon glyphicon-info-sign"></span> 通路對應</a></li>
+							<li><a href="/ota"><span class="glyphicon glyphicon-globe"></span> OTA通路</a></li>
+						</ul>
+					</li>
+															<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-stats"></span> 分析報表 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/statistics/roomtype"><span class="glyphicon glyphicon glyphicon-tower"></span> 房型銷售</a></li>
+							<li><a href="/statistics/ota"><span class="glyphicon glyphicon glyphicon-random"></span> 通路銷售</a></li>
+							<!-- <li><a href="/statistics/annual"><span class="glyphicon glyphicon glyphicon-usd"></span> 年度銷售</a></li> -->
+						</ul>
+					</li>
+															<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> 資料設定 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/hotelinfo"><span class="glyphicon glyphicon-book"></span> 飯店資料</a></li>
+							<li><a href="/roomdetail"><span class="glyphicon glyphicon-font"></span> 房型資料</a></li>
+						</ul>
+					</li>
+										<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><sapn class="glyphicon glyphicon-cog"></sapn> 系統設定 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/permission"><span class="glyphicon glyphicon-user"></span> 帳號設定</a></li>
+														<li><a href="/systems/oplog"><span class="glyphicon glyphicon-list"></span> 操作記錄</a></li>
+							<!-- <li><a href="/systems/opinv"><span class="glyphicon glyphicon-transfer"></span> 庫存異動</a></li>
+							<li><a href="/systems/opplaninv"><span class="glyphicon glyphicon-transfer"></span> 價格異動</a></li> -->
+							                                                        <li><a href="/systems/rsakey"><span class="glyphicon glyphicon-credit-card"></span> 信用卡加密</a></li>
+                            						</ul>
+					</li>
+										<li><a href="http://crs.hotelnabe.com.tw" target="_blank"><span class="glyphicon glyphicon-share"></span> CRS</a></li>
+									</ul>
+				<ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown" id="ota-official">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-home"></span> OTA首頁<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                            							                                <li><a href="https://ycs.agoda.com/" target="_blank">Agoda</a></li>
+							                                <li><a href="http://www.booking.com/hotelaccess" target="_blank">Booking</a></li>
+							                                <li><a href="https://www.expediapartnercentral.com/" target="_blank">Expedia</a></li>
+							                                <li><a href="http://ebooking.elong.com/ebookingnew/newlogin.mvc/login" target="_blank">Elong</a></li>
+							                                <li><a href="https://extranet.orbitz.com/" target="_blank">Orbitz</a></li>
+							                                <li><a href="https://hotels.gta-travel.com/gcres/auth/securelogin?targetUri=/reservation/menu/showOption?entity=bookingMenu" target="_blank">GTA</a></li>
+							                                <li><a href="http://ebooking.ctrip.com/ebkassembly/login.aspx" target="_blank">Ctrip-CM預付</a></li>
+							                                <li><a href="http://ebooking.ctrip.com/ebkassembly/login.aspx" target="_blank">Ctrip-CM現付</a></li>
+							                            						</ul>
+					</li>
+					<li class="dropdown" id="current-hotel" data-toggle="tooltip" data-placement="left" title="" data-original-title="切換飯店">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-home"></span> SureHigh Hotel <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+																						    <li><a href="/hotel/sw/1">SureHigh Hotel</a></li>
+																					</ul>
+					</li>
+					<li><p class="navbar-text">歡迎 demo</p></li>
+					<li><a href="/user/logout" id="logout" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="登出"><span class="glyphicon glyphicon-log-out"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--contactus-->
+	<div class="ContactUs right">
+      <div class="tooltips">
+          <div class="btn-group dropup">
+            <button type="button" class="ContactUs btn btn-primary dropdown-toggle btn-circle btn-lg" title="聯絡我們" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<span class="glyphicon glyphicon-earphone"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li>
+                <div class="report">
+                  <h2 class="text-center">聯絡我們</h2>  
+				<hr>
+                    <div class="col-sm-12">
+					<h4>旭海國際科技</h4>
+                        <small class="small_map_marker"><cite title="台北市中山北路二段115巷47號2樓">台北市中山北路二段115巷47號2樓 <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+						<br>
+						<div class="CustomerServiceBox">
+							<span class="glyphicon glyphicon-user"> 曾楓娥 Faith</span>
+								<br>
+							<span class="glyphicon glyphicon-envelope"> <a href="mailto:faithtseng@surehigh.com.tw">faithtseng@surehigh.com.tw</a></span>
+								<br>
+							<span class="glyphicon glyphicon-earphone"> 02-66087639#122</span>
+							<br>
+						</div>
+						<div class="CustomerServiceBox">
+							<span class="glyphicon glyphicon-user"> 陳家莉 Anita</span>
+								<br>
+							<span class="glyphicon glyphicon-envelope"> <a href="mailto:anita.chen@surehigh.com.tw">anita.chen@surehigh.com.tw</a></span>
+								<br>
+							<span class="glyphicon glyphicon-earphone"> 02-66087639#121</span>
+						</div>
+						<br>
+                     </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+<div class="container-fluid ng-scope" ng-app="nabeApp" ng-controller="RoomDetailCtrl">
+	<div class="custom-breadcrumb">資料設定 &gt; 房型設定</div>
+	<div class="row">
+
+		<div class="col-xs-2 roomtype-sidebar">
+			<h4>選擇房型</h4>
+			<ul class="nav roomtype-nav-sidebar roomtype-ul" id="roomlist">
+				<!-- ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">海景雙人房</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">晨光海景單人房</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">月光海景套房</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">背包客房111</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">standard single</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">標準雙人房</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">CRS特惠房-不指定</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">蜜月套房</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">驚奇樹屋雙人房(一大床)</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">驚奇樹屋雙人房(測試錯誤)</a></li><!-- end ngRepeat: room in rooms --><li ng-repeat="room in rooms" class="ng-scope"><a herf="javascript:void(0)" style="cursor: pointer" ng-click="showRoom(room.RoomID)" class="ng-binding">555</a></li><!-- end ngRepeat: room in rooms -->
+			</ul>
+		</div>
+
+		<div class="col-xs-10" id="roomdetailForm">
+			<div class="form-group ro-label">
+				<h4>修改房型</h4>
+			</div>
+
+			<form role="form" class="form-horizontal ng-pristine ng-valid" name="DetailForm">
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">房間名稱</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomInfo.roomname" disabled="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">住房人數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomInfo.roomoccu" disabled="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">最大住房人數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomInfo.maxoccu" disabled="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">加人價格</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomInfo.extraperson" disabled="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">定價</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomInfo.rackrate" disabled="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">最低售價</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomInfo.minprice" disabled="">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">房型標題</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid" ng-model="roomDetail.Title"> ※ Airbnb至少8個字以上
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">房間介紹</label>
+					<div class="col-xs-3">
+						<textarea rows="5" class="form-control ng-pristine ng-valid" ng-model="roomDetail.Summary" placeholder=""></textarea> ※ Airbnb至少50個字以上
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">假日價格</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.DefaultWeekendPrice" ng-pattern="/^\d+$/">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">押金</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.SecurityDeposit" ng-pattern="/^\d+$/">  ※ Airbnb至少 3,000 以上
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">28天前預訂折數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.MonthlyPriceFactor" ng-pattern="/^1(\.0+)?$|^0{1}\.(0{1}[^0]{1}|[1-9]{1}(\d{1})?)$/" placeholder="0.01 ~ 1">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">7天前預訂折數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.WeeklyPriceFactor" ng-pattern="/^1(\.0+)?$|^0{1}\.(0{1}[^0]{1}|[1-9]{1}(\d{1})?)$/" placeholder="0.01 ~ 1">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">酒店類型</label>
+					<div class="col-xs-3">
+						<select class="form-control ng-pristine ng-valid" ng-options="k as v for (k, v) in propertyType" ng-model="roomDetail.PropertyType"><option value="?" selected="selected" label=""></option><option value="apartment" label="公寓">公寓</option><option value="bnb" label="民宿">民宿</option><option value="cabin" label="木屋">木屋</option><option value="dorm" label="宿舍">宿舍</option><option value="house" label="別墅">別墅</option><option value="other" label="其他">其他</option><option value="villa" label="渡假村">渡假村</option></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">房間類型</label>
+					<div class="col-xs-3">
+						<select class="form-control ng-pristine ng-valid" ng-options="k as v for (k, v) in listingType" ng-model="roomDetail.ListingType"><option value="?" selected="selected" label=""></option><option value="entire_home" label="整棟">整棟</option><option value="private_room" label="一般房間">一般房間</option><option value="shared_space" label="通舖">通舖</option></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">床型</label>
+					<div class="col-xs-3">
+						<select class="form-control ng-pristine ng-valid" ng-options="k as v for (k, v) in bedType" ng-model="roomDetail.Type"><option value="?" selected="selected" label=""></option><option value="bunk_bed" label="上下舖">上下舖</option><option value="double_bed" label="雙人床">雙人床</option><option value="floor_mattress" label="地舖床墊">地舖床墊</option><option value="king_bed" label="特大床">特大床</option><option value="queen_bed" label="大床">大床</option><option value="single_bed" label="單人床">單人床</option><option value="sofa_bed" label="沙發床">沙發床</option></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">房間間數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.Bedrooms" ng-pattern="/^\d+$/">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">浴室間數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.Bathrooms" ng-pattern="/^\d+$/">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">床數</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control ng-pristine ng-valid ng-valid-pattern" ng-model="roomDetail.Quantity" ng-pattern="/^\d+$/">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">退訂政策</label>
+					<div class="col-xs-3">
+						<select class="form-control ng-pristine ng-valid" ng-options="k as v for (k, v) in cancellationPolicy" ng-model="roomDetail.CancellationPolicy"><option value="?" selected="selected" label=""></option><option value="flexible" label="寬鬆">寬鬆</option><option value="moderate" label="普通">普通</option><option value="strict" label="嚴格">嚴格</option><option value="super_strict_30" label="超級嚴格(30)">超級嚴格(30)</option><option value="super_strict_60" label="超級嚴格(60)">超級嚴格(60)</option></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">設施</label>
+					<div class="col-xs-5">
+						<!-- ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 網路 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> Wi-Fi <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 電視 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 生活必需品 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 洗髮精 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 暖氣 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 空調 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 有線電視 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 早餐、咖啡、茶 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 壁爐 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 壁櫥／抽屜 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 熨斗 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 吹風機 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 按摩浴缸 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 浴缸 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 書桌／工作區 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 兒童餐具 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 兒童書籍及玩具 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 嬰兒床 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 嬰兒浴盆 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'A'" ng-repeat="x in amenitiesType"> 嬰兒椅 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'A' --><!-- end ngRepeat: x in amenitiesType -->
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">共用空間</label>
+					<div class="col-xs-5">
+						<!-- ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 廚房 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 洗衣機 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 烘乾機 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 免費停車 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 電梯 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 游泳池 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 健身房 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 有湖泊 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'C'" ng-repeat="x in amenitiesType"> 有沙灘 <input type="checkbox" id="inlineCheckbox2" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'C' --><!-- end ngRepeat: x in amenitiesType -->
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">安全設施</label>
+					<div class="col-xs-5">
+						<!-- ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'S'" ng-repeat="x in amenitiesType"> 警衛 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'S'" ng-repeat="x in amenitiesType"> 煙霧偵測器 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'S'" ng-repeat="x in amenitiesType"> 一氧化碳偵測器 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'S'" ng-repeat="x in amenitiesType"> 急救箱 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'S'" ng-repeat="x in amenitiesType"> 安全卡 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'S'" ng-repeat="x in amenitiesType"> 滅火器 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'S' --><!-- end ngRepeat: x in amenitiesType -->
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label">房屋守則</label>
+					<div class="col-xs-5">
+						<!-- ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 適合家庭入住 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 適合大型團體入住 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 身障人士友善環境 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 可抽菸 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 允許攜帶寵物 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 房源內有寵物 <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType --><!-- ngIf: x.Type === 'R' --><label class="checkbox-inline ng-binding ng-scope" ng-if="x.Type === 'R'" ng-repeat="x in amenitiesType"> 24小時checkin <input type="checkbox" id="inlineCheckbox1" value="x.Value" ng-model="x.Checked" class="ng-pristine ng-valid">
+						</label><!-- end ngIf: x.Type === 'R' --><!-- end ngRepeat: x in amenitiesType -->
+					</div>
+				</div>
+				<div class="form-group" style="margin-bottom: 0">
+					<label for="" class="col-xs-1 control-label">房間照片</label>
+					<div class="col-xs-2">
+						<input type="text" name="photoTitle" ng-model="photoTitle" class="form-control ng-pristine ng-valid" placeholder="照片說明">
+					</div>
+					<div class="col-xs-3">
+						<input type="text" name="photoURL" ng-model="photoURL" class="form-control ng-pristine ng-valid ng-valid-pattern" placeholder="照片網址，須符合http://或https://" ng-pattern="/^https?:///">
+					</div>
+					<div class="col-xs-3">
+						<button class="btn btn-default" ng-click="addItem()" ng-disabled="!photoURL || !photoTitle" disabled="disabled">增加</button> ※ Airbnb至少須7張照片(包含3張800*500以上照片)
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-1 control-label"></label>
+					<div class="col-xs-5">
+						<div class="panel panel-default ng-hide" ng-hide="photos.length == 0" style="margin-bottom: 0">
+							<div class="panel-heading" ng-click="ph = !ph" style="cursor: pointer">照片列表</div>
+						</div>
+						<ul class="list-group" ng-hide="ph">
+							<!-- ngRepeat: x in photos -->
+						</ul>
+					</div>
+				</div>
+			</form>
+			<div class="form-group">
+				<label for="" class="col-xs-1 control-label"></label>
+				<div class="col-xs-1">
+					<button class="btn btn-warning" type="button" ng-click="submit()">儲存</button>
+				</div>
+				<div class="col-xs-4">
+					<!-- ngIf: failed -->
+					<!-- ngIf: success -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

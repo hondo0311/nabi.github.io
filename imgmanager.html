@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" ;="" charset="utf-8">
+	<title>Hotel Nabe</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.hotelnabe.com.tw/css/ed0c2537.vendor.css">
+	<link rel="stylesheet" href="https://www.hotelnabe.com.tw/css/6b9fc4d1.main.css">
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+	<script src="https://www.hotelnabe.com.tw/js/25b0a9ff.vendor.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/fileinput.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/locales/zh-TW.js"></script>
+	
+</head>
+<body>
+        <nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-list">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="/">
+                <div class="lt-logo" id="nabe-logo" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="回首頁"></div>
+                </a>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-list">
+				<ul class="nav navbar-nav">
+					                                        <li><a href="/order"><span class="glyphicon glyphicon-pencil"></span> 訂單管理</a></li>
+										<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-transfer"></span> 數量價格 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+														<li><a href="/roomqty"><span class="glyphicon glyphicon-share-alt"></span> 初次設定</a></li><!--快速放房-->
+																					<li><a href="/closeout"><span class="glyphicon glyphicon glyphicon-plus-sign"></span> 每日庫存</a></li><!--每日數量-->
+														<li><a href="/rateotadate"><span class="glyphicon glyphicon-list-alt"></span> 價格總表</a></li><!--庫存總表-->
+														<li><a href="/ratecopy"><span class="glyphicon glyphicon-chevron-right"></span> 複製價格</a></li>
+														<li><a href="/syncstatus"><span class="glyphicon glyphicon-random"></span> 同步狀態</a></li>
+						</ul>
+					</li>
+										<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> 基本設定 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/roomtype"><span class="glyphicon glyphicon-tags"></span> 價格方案</a></li>
+							<li><a href="/mapping"><span class="glyphicon glyphicon-info-sign"></span> 通路對應</a></li>
+							<li><a href="/ota"><span class="glyphicon glyphicon-globe"></span> OTA通路</a></li>
+						</ul>
+					</li>
+															<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-stats"></span> 分析報表 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/statistics/roomtype"><span class="glyphicon glyphicon glyphicon-tower"></span> 房型銷售</a></li>
+							<li><a href="/statistics/ota"><span class="glyphicon glyphicon glyphicon-random"></span> 通路銷售</a></li>
+							<!-- <li><a href="/statistics/annual"><span class="glyphicon glyphicon glyphicon-usd"></span> 年度銷售</a></li> -->
+						</ul>
+					</li>
+															<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> 資料設定 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/hotelinfo"><span class="glyphicon glyphicon-book"></span> 飯店資料</a></li>
+							<li><a href="/roomdetail"><span class="glyphicon glyphicon-font"></span> 房型資料</a></li>
+						</ul>
+					</li>
+										<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><sapn class="glyphicon glyphicon-cog"></sapn> 系統設定 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/permission"><span class="glyphicon glyphicon-user"></span> 帳號設定</a></li>
+														<li><a href="/systems/oplog"><span class="glyphicon glyphicon-list"></span> 操作記錄</a></li>
+							<!-- <li><a href="/systems/opinv"><span class="glyphicon glyphicon-transfer"></span> 庫存異動</a></li>
+							<li><a href="/systems/opplaninv"><span class="glyphicon glyphicon-transfer"></span> 價格異動</a></li> -->
+							                                                        <li><a href="/systems/rsakey"><span class="glyphicon glyphicon-credit-card"></span> 信用卡加密</a></li>
+                            						</ul>
+					</li>
+										<li><a href="http://crs.hotelnabe.com.tw" target="_blank"><span class="glyphicon glyphicon-share"></span> CRS</a></li>
+									</ul>
+				<ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown" id="ota-official">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-home"></span> OTA首頁<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                            							                                <li><a href="https://ycs.agoda.com/" target="_blank">Agoda</a></li>
+							                                <li><a href="http://www.booking.com/hotelaccess" target="_blank">Booking</a></li>
+							                                <li><a href="https://www.expediapartnercentral.com/" target="_blank">Expedia</a></li>
+							                                <li><a href="http://ebooking.elong.com/ebookingnew/newlogin.mvc/login" target="_blank">Elong</a></li>
+							                                <li><a href="https://extranet.orbitz.com/" target="_blank">Orbitz</a></li>
+							                                <li><a href="https://hotels.gta-travel.com/gcres/auth/securelogin?targetUri=/reservation/menu/showOption?entity=bookingMenu" target="_blank">GTA</a></li>
+							                                <li><a href="http://ebooking.ctrip.com/ebkassembly/login.aspx" target="_blank">Ctrip-CM預付</a></li>
+							                                <li><a href="http://ebooking.ctrip.com/ebkassembly/login.aspx" target="_blank">Ctrip-CM現付</a></li>
+							                            						</ul>
+					</li>
+					<li class="dropdown" id="current-hotel" data-toggle="tooltip" data-placement="left" title="" data-original-title="切換飯店">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-home"></span> SureHigh Hotel <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+																						    <li><a href="/hotel/sw/1">SureHigh Hotel</a></li>
+																					</ul>
+					</li>
+					<li><p class="navbar-text">歡迎 demo</p></li>
+					<li><a href="/user/logout" id="logout" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="登出"><span class="glyphicon glyphicon-log-out"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--contactus-->
+
+	<div class="custom-breadcrumb">資料設定 &gt; 圖片管理</div>
+	<div class="row">
+		<div class="col-xs-12">
+				<div class="container">
+					<h2>圖片管理</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">海景雙人房</div>
+							<div class="panel-body">
+								<div class="file-loading">
+									<input id="input-1" name="input1[]" type="file" multiple>
+									
+								</div>
+								<div class="form-group">
+										<label for="comment">圖片敘述:</label>
+										<textarea class="form-control" rows="5" id="comment"></textarea>
+									  </div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">晨光海景單人房</div>
+							<div class="panel-body">
+								<div class="file-loading">
+									<input id="input-2" name="input1[]" type="file" multiple>
+									
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">月光海景套房</div>
+							<div class="panel-body">
+								<div class="file-loading">
+									<input id="input-3" name="input1[]" type="file" multiple>
+								</div>
+							</div>
+						</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">月光海景套房</div>
+								<div class="panel-body">
+									<div class="file-loading">
+										<input id="input-4" name="input1[]" type="file" multiple>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+						  
+		</div>
+	</div>
+
+<script>
+	$(document).on('ready', function() {
+    var url1 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/8109987.jpg',
+		url2 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/2857205.jpg',
+		url3 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/4944765.jpg',
+		url4 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/4866331.jpg',
+		url5 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/8593313.jpg',
+		url6 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/8499748.jpg',
+		url7 = 'http://www.85bayview.com/uploads/1/2/5/2/12520614/054.jpg';
+    $("#input-1").fileinput({
+        initialPreview: [url1, url2, url3, url4, url5 ,url6,url7],
+        initialPreviewAsData: true,
+        initialPreviewConfig: [
+            {caption: "這是左邊", downloadUrl: url1, size: 930321, width: "120px", key: 1},
+			{caption: "這是右邊", downloadUrl: url2, size: 1218822, width: "120px", key: 2},
+			{caption: "這是上面", downloadUrl: url1, size: 930321, width: "120px", key: 3},
+			{caption: "這市櫃子", downloadUrl: url2, size: 1218822, width: "120px", key: 4},
+			{caption: "這是窗戶", downloadUrl: url1, size: 930321, width: "120px", key: 5},
+			{caption: "我們有很好的景觀", downloadUrl: url2, size: 1218822, width: "120px", key: 6},
+			{caption: "你看是不是?", downloadUrl: url1, size: 930321, width: "120px", key: 7}
+            
+        ],
+        deleteUrl: "/site/file-delete",
+        overwriteInitial: false,
+        //maxFileSize: 100,
+		initialCaption: "圖片尺寸須大於800X500",
+		language: "zh-TW"
+	});
+	$("#input-2").fileinput({
+        initialPreview: [],
+        initialPreviewAsData: true,
+        initialPreviewConfig: [ ],
+        deleteUrl: "/site/file-delete",
+        overwriteInitial: false,
+        //maxFileSize: 100,
+		initialCaption: "圖片尺寸須大於800X500",
+		language: "zh-TW"
+    });
+	$("#input-3").fileinput({
+        initialPreview: [],
+        initialPreviewAsData: true,
+        initialPreviewConfig: [ ],
+        deleteUrl: "/site/file-delete",
+        overwriteInitial: false,
+        //maxFileSize: 100,
+		initialCaption: "圖片尺寸須大於800X500",
+		language: "zh-TW"
+    });
+	$("#input-4").fileinput({
+        initialPreview: [],
+        initialPreviewAsData: true,
+        initialPreviewConfig: [ ],
+        deleteUrl: "/site/file-delete",
+        overwriteInitial: false,
+        //maxFileSize: 100,
+		initialCaption: "圖片尺寸須大於800X500",
+		language: "zh-TW"
+    });
+});
+
+</script>
+</body>
+</html>
